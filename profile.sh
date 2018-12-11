@@ -8,4 +8,4 @@ function git_branch() {
   git branch 2>/dev/null | grep '^*' | colrm 1 2
 }
 
-export PS1="  \w\n$(git_branch)\$ "
+export PS1="\w\n$(git_branch)\$ "
