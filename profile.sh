@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+export GIT_EDITOR="nvim"
+export EDITOR="nvim"
+export GOPATH=$HOME
+
+export PATH="${PATH}:${GOPATH}/bin"
+
+alias vim="nvim"
+
 function download() {
   aria2c -x 16 -s 16 "$@"
 }
@@ -13,10 +21,6 @@ function git_branch() {
 }
 
 export PS1="\w\n$(git_branch)\$ "
-
-alias vim="nvim"
-export GIT_EDITOR="nvim"
-export EDITOR="nvim"
 
 eval "$(fasd --init auto)"
 
