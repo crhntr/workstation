@@ -1,0 +1,48 @@
+[alias]
+	st = status
+	di = diff
+	co = checkout
+	br = branch
+  cp = cherry-pick
+	sta = stash
+	llog = "log --date=local"
+	flog = "log --pretty=fuller --decorate"
+	lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+  lo = "!git --no-pager log --graph --decorate --pretty=oneline --abbrev-commit --all -n10"
+	lol = "log --graph --decorate --oneline"
+	lola = "log --graph --decorate --oneline --all"
+	ds = "diff --staged"
+	fixup = "commit --fixup"
+	squash = "commit --squash"
+	unstage = "reset HEAD --"
+  rebase = rebase --autosquash
+	rum = "rebase master@{u}"
+	rio = rebase -i origin/master --exec 'git duet-commit --amend --reset-author'
+  drb = rebase -i --exec 'git duet-commit --amend --reset-author'
+	last = log -1 --format=full HEAD
+  standup = "log --since='yesterday'"
+  su = "log --since='yesterday'"
+  sur = submodule update --init --recursive --jobs=7
+[core]
+	pager = less -FXRS -x2
+	excludesfile = /Users/pivotal/.gitignore_global
+	filemode = true
+[apply]
+	whitespace = nowarn
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
+[branch]
+	autosetupmerge = true
+[rebase]
+	autosquash = true
+[push]
+	default = simple
+[merge]
+	tool = fugitive
+[user]
+	name = Christopher Hunter
+	email = hunter.christopher@icloud.com
