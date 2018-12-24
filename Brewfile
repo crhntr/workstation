@@ -2,7 +2,6 @@ tap 'homebrew/bundle'
 
 brew 'jq'
 brew 'cask'
-brew 'bat'
 brew 'neovim'
 brew 'tmux'
 brew 'watch'
