@@ -5,6 +5,7 @@ export EDITOR="nvim"
 export GOPATH=$HOME
 
 export PATH="${PATH}:${GOPATH}/bin"
+export PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
 
 alias vim="nvim"
 
