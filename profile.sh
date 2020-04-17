@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
 
+# Maximum number of history lines in memory
+export HISTSIZE=50000
+# Maximum number of history lines on disk
+export HISTFILESIZE=50000
+# Setting the man pager to bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+# After each command, append to the history file and reread it
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+# Enable FZF for fuzzy searching bash history
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 export GIT_EDITOR="nvim"
 export EDITOR="nvim"
 export GOPATH=$HOME
