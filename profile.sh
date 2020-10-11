@@ -11,8 +11,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 shopt -s histappend
 # After each command, append to the history file and reread it
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-# Enable FZF for fuzzy searching bash history
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export GIT_EDITOR="nvim"
 export EDITOR="nvim"
@@ -42,8 +40,6 @@ function git_branch() {
   git branch 2>/dev/null | grep '^*' | colrm 1 2
 }
 
-export PS1="\w\n$(git_branch)\$ "
+export PS1="\$ "
 
-eval "$(fasd --init auto)"
-
-./.greeting.sh
+$HOME/.greeting.sh
