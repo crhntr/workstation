@@ -20,3 +20,9 @@ Then run:
 ```
 brew update-reset
 ```
+
+## OpenSSL
+
+```
+openssl s_client -showcerts -connect example.com:8443
+```
