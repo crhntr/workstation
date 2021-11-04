@@ -45,4 +45,6 @@
 	tool = fugitive
 [user]
 	name = Christopher Hunter
-	email = hunter.christopher@icloud.com
+	email = crhntr.com@gmail.com
+[init]
+    defaultBranch = main
