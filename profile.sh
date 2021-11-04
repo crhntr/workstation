@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 export HISTCONTROL=ignoreboth
 # Maximum number of history lines in memory
