@@ -2,7 +2,7 @@
 
 function main() {
   cp gitconfig ~/.gitconfig
-  cp profile.sh ~/.bash_profile
+  cp bash_profile ~/.bash_profile
   cp vimrc ~/.vimrc
   cp Brewfile ~/.Brewfile
   cp greeting.sh ~/.greeting.sh

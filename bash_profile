@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 export HISTCONTROL=ignoreboth
 # Maximum number of history lines in memory
@@ -16,7 +16,7 @@ export GIT_EDITOR="nvim"
 export EDITOR="nvim"
 
 export PATH="${PATH}:${GOPATH}/bin"
-export PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:${PATH}"
 
 alias vim="nvim"
 alias vi="nvim"
@@ -29,10 +29,6 @@ alias tmux='tmux -u'
 
 function download() {
   aria2c -x 16 -s 16 "$@"
-}
-
-function git_branch() {
-  git branch 2>/dev/null | grep '^*' | colrm 1 2
 }
 
 $HOME/.greeting.sh

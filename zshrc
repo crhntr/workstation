@@ -20,8 +20,4 @@ function download() {
   aria2c -x 16 -s 16 "$@"
 }
 
-function git_branch() {
-  git branch 2>/dev/null | grep '^*' | colrm 1 2
-}
-
 $HOME/.greeting.sh
